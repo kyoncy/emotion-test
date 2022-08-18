@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "https://gitpkg.now.sh/kyoncy/emotion/packages/react?389f8a989fe20fe07f9af34052d1a7671137db4a",
+    "@emotion/styled": "https://gitpkg.now.sh/kyoncy/emotion/packages/styled?389f8a989fe20fe07f9af34052d1a7671137db4a",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -20,7 +22,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
+  },
+  "resolutions": {
+    "@emotion/cache": "https://gitpkg.now.sh/kyoncy/emotion/packages/cache?389f8a989fe20fe07f9af34052d1a7671137db4a"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
